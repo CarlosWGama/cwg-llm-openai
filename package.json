@@ -1,0 +1,40 @@
+{
+  "name": "carloswgama/llm-js-openai",
+  "version": "1.0.0",
+  "description": "Aula 02 - LLM - Express e OpenAI",
+  "keywords": [
+    "LLM",
+    "LangChain",
+    "OpenAI",
+    "Express"
+  ],
+  "homepage": "https://github.com/CarlosWGama/llm-js-openai#readme",
+  "bugs": {
+    "url": "https://github.com/CarlosWGama/llm-js-openai/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosWGama/llm-js-openai.git"
+  },
+  "license": "MIT",
+  "author": "Carlos W. Gama",
+  "type": "commonjs",
+  "main": "./src/openai.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@langchain/community": "^0.3.54",
+    "@langchain/core": "^0.3.73",
+    "@langchain/openai": "^0.6.11",
+    "@langchain/textsplitters": "^0.1.0",
+    "cheerio": "^1.1.2",
+    "dotenv": "^16.4.5",
+    "faiss-node": "^0.5.1",
+    "langchain": "^0.3.32",
+    "pdf-parse": "^1.1.1"
+  },
+  "devDependencies": {
+    "express": "^5.1.0"
+  }
+}

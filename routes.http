@@ -1,0 +1,41 @@
+@baseURL = http://localhost:3000/api
+
+###
+GET {{baseURL}}/simples
+content-type: application/json
+
+{
+    "pergunta": "Quem é Carlos W. Gama?"
+}
+
+###
+GET {{baseURL}}/pdf
+content-type: application/json
+
+{
+    "pergunta": "Quem é Carlos W. Gama?"
+}
+
+
+
+###
+GET {{baseURL}}/url
+content-type: application/json
+
+{
+    "pergunta": "Quem é Carlos W. Gama?"
+}
+
+###
+GET {{baseURL}}/embedding
+content-type: application/json
+
+{
+    "pergunta": "Quem é Carlos W. Gama?"
+}
+
+--------------
+# Créditos
+
+Autor: Carlos W. Gama
+Licença: MIT
