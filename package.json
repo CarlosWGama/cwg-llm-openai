@@ -1,6 +1,6 @@
 {
   "name": "cwg-llm-openai",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CWG - LLM - LangChain e OpenAI",
   "keywords": [
     "LLM",
