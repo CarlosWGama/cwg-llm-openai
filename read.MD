@@ -25,7 +25,12 @@ Link: [https://platform.openai.com/api-keys](https://platform.openai.com/api-key
 
 #### Etapa 2 - Baixar o Projeto
 
-Baixe o projeto do GitHub e instale as dependências:
+Instale pelo pacote NPM:
+```bash
+npm install carloswgama/cwg-llm-openai
+```
+
+Ou baixe o projeto do GitHub e instale as dependências:
 ```bash
 git clone https://github.com/CarlosWGama/llm-express-langchain-openai ./projeto
 cd projeto
@@ -34,7 +39,7 @@ npm install
 
 #### Etapa 3 - Setar as variáveis de ambiente
 
-Copie o arquivo .env.example e renomei para .env
+Crie um arquivo .env no seu projeto
 Nesse arquivo você deve informar:
 
 ```bash
@@ -74,14 +79,14 @@ Lista completa dos preços [preços](https://platform.openai.com/docs/pricing)
 primeira importe as funções que deseja executar:
 
 ```js
-const { ask, askFromPrompt, askFromURL, askFromPDF, askFromEmbedding, saveEmbedding } = require('./src/openai');
+const { ask, askFromPrompt, askFromURL, askFromPDF, askFromEmbedding, saveEmbedding } = require('cwg-llm-openai');
 ```
 
 ###### Exemplo de um comando básico
 Exemplo mais básico do uso da IA sem conhecimento extra passado. Todo conhecimento é o do modelo.
 
 ```js
-const { ask } = require('./src/openai');
+const { ask } = require('cwg-llm-openai');
 
 async function exemplo() {
     const resposta = await ask('Quem é Carlos W. Gama?');
@@ -92,7 +97,7 @@ async function exemplo() {
 ###### Exemplo passando um contexto (RAG básico)
 Esse tipo de cenário é ideal quando você quer adicionar informações ao conhecimento da LLM, que vem de uma base própria sua. 
 ```js
-const { askFromPrompt } = require('./src/openai');
+const { askFromPrompt } = require('cwg-llm-openai');
 
 async function exemplo() {
     //Informação tirada de alguma fonte
@@ -110,7 +115,7 @@ O Embbeding é a representação numérica de seus dados (textos, documentos, et
 O embedding padrão usado é o text-embedding-ada-002, que possui um custo de $0.10 a cada 1 Milhão de tokens. 
 
 ```js
-const { askFromURL } = require('./src/openai');
+const { askFromURL } = require('cwg-llm-openai');
 
 async function exemplo() {
     //Informação tirada de alguma fonte
@@ -126,7 +131,7 @@ Esse cenário faz com que a informação buscada de um arquivo em PDF. É o cen�
 Também utiliza o Embedding do OpenAI para criar o retriever da base de dados vetorial.
 
 ```js
-const { askFromPDF } = require('./src/openai');
+const { askFromPDF } = require('cwg-llm-openai');
 
 async function exemplo() {
     //Informação tirada de alguma fonte
@@ -139,7 +144,7 @@ async function exemplo() {
 ###### Exemplo passando uma consulta direto de uma base vetorial
 Caso deseje, pode salvar um dado passado em RAG para depois consultá-lo diretamente sem precisa converter novamente o arquivo para uma base númerica. O dado fica salvo no seu computador. 
 ```js
-const { askFromURL, askFromPDF, askFromEmbedding } = require('./src/openai');
+const { askFromURL, askFromPDF, askFromEmbedding } = require('cwg-llm-openai');
 
 async function consulta_salvando() {
     //Informação tirada de alguma fonte
@@ -161,7 +166,7 @@ async function consulta_embedding() {
 Ou caso deseja, pode salvar o arquivo antes para consultá-lo depois
 
 ```js
-const { askFromURL, askFromPDF, askFromEmbedding } = require('./src/openai');
+const { askFromURL, askFromPDF, askFromEmbedding } = require('cwg-llm-openai');
 
 async function save() {
     const arquivoRAG = 'nome_indice';
@@ -189,7 +194,7 @@ A baixo segue um exemplo de uma implementação rodando pelo ExpressJS. Deixando
 
 ```js
 const express = require('express')
-const { ask, askFromPrompt, askFromURL, askFromPDF, askFromEmbedding } = require('./src/openai');
+const { ask, askFromPrompt, askFromURL, askFromPDF, askFromEmbedding } = require('cwg-llm-openai');
 
 const app = express();
 app.use(express.json());

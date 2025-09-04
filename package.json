@@ -1,20 +1,20 @@
 {
-  "name": "llm-js-openai",
+  "name": "cwg-llm-openai",
   "version": "1.0.0",
-  "description": "Aula 02 - LLM - Express e OpenAI",
+  "description": "CWG - LLM - LangChain e OpenAI",
   "keywords": [
     "LLM",
     "LangChain",
     "OpenAI",
     "Express"
   ],
-  "homepage": "https://github.com/CarlosWGama/llm-js-openai#readme",
+  "homepage": "https://github.com/CarlosWGama/cwg-llm-openai#readme",
   "bugs": {
-    "url": "https://github.com/CarlosWGama/llm-js-openai/issues"
+    "url": "https://github.com/CarlosWGama/cwg-llm-openai/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CarlosWGama/llm-js-openai.git"
+    "url": "git+https://github.com/CarlosWGama/cwg-llm-openai.git"
   },
   "license": "MIT",
   "author": "Carlos W. Gama",

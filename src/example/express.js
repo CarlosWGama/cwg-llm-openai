@@ -1,5 +1,6 @@
 const express = require('express')
-const { ask, askFromPrompt, askFromURL, askFromPDF, askFromEmbedding } = require('./src/openai');
+//const { ask, askFromPrompt, askFromURL, askFromPDF, askFromEmbedding } = require('../openai');
+const { ask, askFromPrompt, askFromURL, askFromPDF, askFromEmbedding } = require('cwg-llm-openai');
 
 const app = express();
 app.use(express.json());
