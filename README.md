@@ -32,7 +32,7 @@ npm install carloswgama/cwg-llm-openai
 
 Ou baixe o projeto do GitHub e instale as dependências:
 ```bash
-git clone https://github.com/CarlosWGama/llm-express-langchain-openai ./projeto
+git clone https://github.com/CarlosWGama/cwg-llm-openai ./projeto
 cd projeto
 npm install
 ```
@@ -166,18 +166,18 @@ async function consulta_embedding() {
 Ou caso deseja, pode salvar o arquivo antes para consultá-lo depois
 
 ```js
-const { askFromURL, askFromPDF, askFromEmbedding } = require('cwg-llm-openai');
+const { saveEmbedding, askFromEmbedding } = require('cwg-llm-openai');
 
 async function save() {
     const arquivoRAG = 'nome_indice';
     
     //Exemplo do URL
     const url = 'https://carloswgama.com.br';
-    await saveEmbedding(url);
+    await saveEmbedding(url, null, arquivoRAG);
 
     //Exemplo com PDF
     const documento = 'documento.pdf';
-    await saveEmbedding(null, documento);
+    await saveEmbedding(null, documento, arquivoRAG);
 }
 
 async function consulta_embedding() {
@@ -265,3 +265,7 @@ app.get('/api/embedding', async (req, res) => {
 
 app.listen(3000, () => console.log('Servidor Rodando'))
 ```
+
+-------
+Autor: Carlos W. Gama
+Licença: MIT

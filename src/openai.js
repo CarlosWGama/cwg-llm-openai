@@ -18,7 +18,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const llm = new ChatOpenAI({
   apiKey: process.env.CWG_LLM_OPENAI_KEY,
-  modelName: process.env.CWG_LLM_OPENAI_MODEL ? process.env.CWG_LLM_OPENAI_MODEL : "gpt-4.1-nano",
+  modelName: process.env.CWG_LLM_OPENAI_MODEL ? process.env.CWG_LLM_OPENAI_MODEL : "gpt-5-nano",
 });
 const embeddings = new OpenAIEmbeddings({ 
   apiKey: process.env.CWG_LLM_OPENAI_KEY, 
